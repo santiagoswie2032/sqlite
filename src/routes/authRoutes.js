@@ -18,7 +18,8 @@ router.post('/register', (req,res)=>{
     // token for the user to authenticate themselves in future requests.
 
     const hashedPassword = bcrypt.hashSync(password, 7); 
-
+    const hashedPassword2 = bcrypt.hashSync(password, 8);
+    
     //we use the bcrypt library to hash the password before storing it in 
     // the database, this is a security measure to protect the user's
     // password in case the database is compromised, the hashSync function
