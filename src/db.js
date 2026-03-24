@@ -10,6 +10,7 @@ db.exec(`
     CREATE TABLE users ( 
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     username TEXT UNIQUE,
+
     password TEXT
     
 )
@@ -24,10 +25,11 @@ db.exec(`
         CREATE TABLE todos ( 
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         user_id INTEGER,
+        username TEXT, //
         task TEXT,
         completed BOOLEAN DEFAULT 0,
         FOREIGN KEY(user_id) REFERENCES users (id)
-        
+        //FOREIGN KEY is a constraint that links the user_id in the todos table to the id in the users table, this ensures that each to-do is associated with a valid user and helps maintain data integrity between the two tables, it also allows us to easily query for all to-dos that belong to a specific user by joining the two tables on the user_id and id columns.
     )
         
         
