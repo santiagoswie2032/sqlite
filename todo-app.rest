@@ -1,23 +1,2 @@
-### home page ? 
-GET http://localhost:5757/
-
-
-### for registration a user POST /AUTH/REGISTER
-POST http://localhost:5757/auth/register
-Content-Type: application/json
-
-{
-    "username": "san@gmail.com",
-    "password": "1234"
-
-}
-
-
-### for login , POST /AUTH/LOGIN
-POST http://localhost:5757/auth/login
-Content-Type: application/json
-
-{
-    "username": "san@gmail.com",
-    "password": "1234"
-}
+### get request (home page)
+GET http://localhost:5757
