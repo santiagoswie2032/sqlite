@@ -36,7 +36,10 @@ router.post('/register', (req,res)=>{
     console.log(hashedPassword2);
 
     try{
+        const insertUser = db.prepare('');
 
+        // now the prepare('') works kinda to exec(''), however the prepare method allows us to inject some 
+        // values in the sql query.
     }
     catch(err){
         console.log(err.message);
