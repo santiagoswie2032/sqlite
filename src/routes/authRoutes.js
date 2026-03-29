@@ -13,7 +13,7 @@ router.post('/register', (req,res)=>{
     // and store the user in the database, we will also generate a JWT token
     // and send it back to the client for authentication purposes.
 
-    const{username, password} = req.body; // we extract the username and password from the request body, which is sent by the client when
+    const{username, password} = req.body; // we extract the username and password from the request body, which is sent by the user when
     // they are trying to register a new account, we will use these values to create a new user in the database and also to generate a JWT
     // token for the user to authenticate themselves in future requests.
 
@@ -33,6 +33,7 @@ router.post('/register', (req,res)=>{
     console.log(username,password);
 
     console.log(hashedPassword);
+    console.log(hashedPassword2);
 
     res.sendStatus(201);
 
