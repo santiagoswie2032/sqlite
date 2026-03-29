@@ -35,7 +35,20 @@ router.post('/register', (req,res)=>{
     console.log(hashedPassword);
     console.log(hashedPassword2);
 
-    res.sendStatus(201);
+    try{
+
+    }
+    catch(err){
+        console.log(err.message);
+        res.sendStatus(504);
+    }
+
+    // obviously only one out of try and catch runs at a time, if try has been executed successfully then 
+    // catch will be skipped, if try dosent run as intended, catch will log the error message and send a 504
+    // status code to the user implying that something has gone wrong with the server.
+
+
+    
 
     // saves the new user's username and their irreversible encrypted passwoerd 
     //in the database, and then generates a JWT token for the user to authenticate.
