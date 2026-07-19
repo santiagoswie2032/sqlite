@@ -1,5 +1,5 @@
 {
-  "name": "backendtutorial2",
+  "name": "sqlite_tutorial",
   "version": "1.0.0",
   "description": "full stack application that uses a NodeJS backend, a SQLite database and JWT authentication.",
   "main": "index.js",
